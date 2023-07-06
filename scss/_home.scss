@@ -1,0 +1,170 @@
+.s-hero {
+    background-color: $purple;
+    margin-top: 119px;
+    padding-top: 39px;
+    .container {
+    @include flex(row, flex-start, space-between);
+    }
+    .text {
+        width: 100%;
+        max-width: 550px;
+        h1 {
+            font-family: 'PT Sans', sans-serif;
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 120%;
+            color: $white;
+            margin-bottom: 16px;
+        }
+        p{
+            font-family: 'Lato', sans-serif;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 150%;
+            color: $white;
+            max-width: 488px;
+            margin-bottom: 32px;
+        }
+        button {
+            @include style-btn(54px, $yellow, $white);
+            margin-bottom: 86px;
+        }
+        .conheca {
+            display: flex;
+            align-items: center;
+            .icon {
+                width: 42px;
+                height: 42px;
+                background-color: rgba(124, 90, 186, 0.247);
+                border-radius: 6px;
+                @include flex(row, center, center)
+            }
+            span {
+                font-family: 'Lato', sans-serif;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 19px;
+                color: $white;
+                margin-left: 16px;
+            }
+        }
+    }
+    .image{
+        position: relative;
+        top: 32px;
+    }
+    @include responsive(991px) {
+        .container {
+            flex-direction: column;
+        }
+        .text{
+            max-width: 100%;
+            margin-bottom: 30px;
+            h1{
+                text-align: center;
+            }
+            p{
+                max-width: 100%;
+                text-align: center;
+            }
+            button{
+                margin: 0 auto;
+                margin-bottom: 40px;
+                display: block;
+            }
+            .conheca{
+                justify-content: center;
+            }
+        }
+    }
+    @include responsive(600px){
+        padding-top: 25px;
+        margin-top: 8rem;
+        .text{
+            h1 {
+                font-size: 4.3rem;
+            }
+        }
+        .image{
+            left: -9px;
+        }
+    }
+}
+
+.s-resources {
+    padding-top: 149px;
+    padding-bottom: 99px;
+    .top{
+        @include flex(row, center, space-between);
+        margin-bottom: 53px;
+        h2{
+            font-family: 'PT Sans', sans-serif;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 130%;
+            color: #453F51;
+            max-width: 500px;
+        }
+        p{
+            font-family: 'Lato', sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 150%;
+            color: #5E5570;
+        }
+    }
+    .content{
+        @include flex(row, flex-start, space-between);
+        .icon{
+            width: 64px;
+            height: 64px;
+            background-color: hwb(255 75% 14% / 0.527);
+            border-radius: 12px;
+            @include flex(center, center, center);
+            margin-bottom: 30px;
+        }
+        .info{
+            max-width: 239px;
+            h4{
+                font-family: 'Lato', sans-serif;
+                font-weight: 800;
+                font-size: 18px;
+                line-height: 22px;
+                color: #5F3CA1;
+            }
+            p{
+                font-family: 'Lato', sans-serif;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 165%;
+                color: #5E5570;
+                padding-top: 20px;
+            }
+        }
+        .card-featured{
+            width: 100%;
+            max-width: 280px;
+            height: 323px;
+            left: 352px;
+            background: rgba(197, 190, 220, 0.42);
+            border-radius: 12px;
+            padding-top: 41px;
+            padding-left: 42px;
+            .info{
+                max-width: 204px;
+            }
+            .icon{
+                background-color: $white;
+            }
+        }
+        ul{
+            margin-top: 41px;
+            width: 100%;
+            max-width: 904px;
+            @include flex(row, flex-start, space-between);
+            border-bottom: 3px solid rgba(95, 60, 161, 0.409);
+            padding-bottom: 65px;
+            padding-left: 20px;
+        }
+    }
+}
